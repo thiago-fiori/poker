@@ -1,7 +1,7 @@
 # poker
 Marco 0 - Setup do Projeto
 - [x] Githubs
-- [ ] Instalação do Node.js
+- [x] Instalação do Node.js
 - [ ] Instalação do Nuxt (Vue)
 - [ ] Entender os arquivos/pastas iniciais
 - [ ] Entender o esquema do Vue (template/script/style)
