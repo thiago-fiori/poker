@@ -1,5 +1,5 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <Mesa> Teago </Mesa>
   </div>
 </template>
