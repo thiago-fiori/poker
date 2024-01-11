@@ -1,7 +1,7 @@
 <template>
   <div>
     <Mesa>
-      <Assento>Jogador 1</Assento>
+      <Assento><Contador></Contador></Assento>
     </Mesa>
   </div>
 </template>
