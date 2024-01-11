@@ -2,7 +2,7 @@
 Marco 0 - Setup do Projeto
 - [x] Githubs
 - [x] Instalação do Node.js
-- [ ] Instalação do Nuxt (Vue)
+- [x] Instalação do Nuxt (Vue)
 - [ ] Entender os arquivos/pastas iniciais
 - [ ] Entender o esquema do Vue (template/script/style)
 - [ ] Criar o primeiro componente => Mesa
