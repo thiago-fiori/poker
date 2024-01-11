@@ -1,5 +1,7 @@
 <template>
   <div>
-    <Mesa> Teago </Mesa>
+    <Mesa>
+      <Assento>Jogador 1</Assento>
+    </Mesa>
   </div>
 </template>

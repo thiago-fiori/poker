@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="mesa">
       <slot />
     </div>
@@ -10,9 +10,15 @@
 
 <style scoped>
 .mesa {
-  width: 600px;
+  width: 1200px;
   height: 600px;
   background-color: green;
   margin: auto;
+  border-radius: 40%;
+}
+.container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
 }
 </style>

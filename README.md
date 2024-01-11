@@ -5,12 +5,12 @@ Marco 0 - Setup do Projeto
 - [x] Instalação do Nuxt (Vue)
 - [x] Entender os arquivos/pastas iniciais
 - [x] Entender o esquema do Vue (template/script/style)
-- [ ] Criar o primeiro componente => Mesa
-  - [ ] Deve ser uma elipse verde
-    - [ ] Deve estar centralizada na tela
-    - [ ] Deve ser responsivo à mudança de tamanho na tela
-- [ ] Criando o segundo componente => Assentos
-  - [ ] Deve ser um círculo vermelho
+- [x] Criar o primeiro componente => Mesa
+  - [x] Deve ser uma elipse verde
+    - [x] Deve estar centralizada na tela
+    - [x] Deve ser responsivo à mudança de tamanho na tela
+- [x] Criando o segundo componente => Assentos
+  - [x] Deve ser um círculo vermelho
 - [ ] Reatividade - adicionar dinamismo à mesa
   - [ ] O número de lugares na mesa deve poder aumentar e diminuir
     - [ ] Criar botões de incrementar e decrementar o número de lugares
