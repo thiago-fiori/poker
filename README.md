@@ -1,6 +1,6 @@
 # poker
 Marco 0 - Setup do Projeto
-- [ ] Githubs
+- [x] Githubs
 - [ ] Instalação do Node.js
 - [ ] Instalação do Nuxt (Vue)
 - [ ] Entender os arquivos/pastas iniciais
