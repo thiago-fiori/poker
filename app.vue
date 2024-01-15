@@ -17,7 +17,6 @@
   const adicionarJogador = function(){
     console.log("Botão apertado");
     jogadores.value++;
-    //console.log(jogadores);
   }
 
   const removerJogador = function(){
@@ -26,7 +25,6 @@
     if(jogadores.value > 0){
       jogadores.value--;
     }
-    //console.log(jogadores);
   }
 </script>
 
