@@ -2,9 +2,9 @@
   <div class="sala">
     <Mesa>
       <Assento
-        v-for="(Jogador, index) in jogadores"
-        :key="index"
-        :style="positionParaStyle(playerPosition(700, 400, index, 8))"
+        v-for="(_, idx) in Array(jogadores)"
+        :key="idx"
+        :style="indexToStyle(1200, 600, idx, 100, 8)"
       ></Assento>
     </Mesa>
 
@@ -15,33 +15,27 @@
   </div>
 </template>
 
-<script setup>
-function positionParaStyle(position) {
-  console.log(position);
-  const style = {
-    position: "relative",
-    left: `${position.x}px`,
-    top: `${position.y}px`,
-    " background-color": "blue",
+<script lang="ts" setup>
+const indexToStyle = (
+  width: number,
+  height: number,
+  index: number,
+
+  actorSize = 200,
+  players = 8
+) => {
+  const phase = Math.PI / 8;
+  const theta = ((2 * Math.PI) / players) * index + phase;
+  const rx = width / 2 + actorSize / 2; // Raio horizontal da elipse
+  const ry = height / 2 + actorSize / 2; // Raio vertical da elipse
+  const x = rx + rx * Math.cos(theta) - actorSize;
+  const y = ry + ry * Math.sin(theta) - actorSize;
+  return {
+    position: "absolute",
+    left: `${x}px`,
+    top: `${y}px`,
   };
-  console.log(style);
-  return style;
-}
-
-function playerPosition(W, H, index, maxPlayers) {
-  // Semi-eixos da elipse
-  let a = W / 2;
-  let b = H / 2;
-
-  // Calcular o ângulo para o jogador atual
-  let angle = 2 * Math.PI * (index / maxPlayers);
-
-  // Calcular posição x e y
-  let x = Math.round(a * Math.cos(angle));
-  let y = Math.round(b * Math.sin(angle));
-
-  return { x: x, y: y };
-}
+};
 
 const jogadores = useState("jogadores", () => 1);
 const adicionarJogador = function () {
@@ -61,23 +55,46 @@ const removerJogador = function () {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   padding: 0;
+  margin: 0;
 }
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-button {
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
 }
 
 .sala {
-  height: 90vh;
-  background-color: brown;
+  height: 100dvh;
+  background-color: orange;
   margin: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
 }
 </style>

@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <h3 :style="{ color: `red` }">
-      <slot></slot>
-    </h3>
-    <div class="assento"></div>
+  <div class="assento">
+    <slot />
   </div>
 </template>
 
