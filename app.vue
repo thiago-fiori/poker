@@ -3,9 +3,7 @@
     <Mesa>
       <Campo>
         <Baralho></Baralho>
-        <Carta>
-
-        </Carta>
+        <Carta v-for="carta in cartasNaMesa"></Carta>
       </Campo>
       
       <Assento
@@ -23,6 +21,28 @@
 </template>
 
 <script lang="ts" setup>
+
+const cartasNaMesa = useState("cartasNaMesa", ()=>[]);
+const turno = useState("turno", ()=>"preFlop")
+const mapaDeTurnos = {
+  preFlop: {cartas: 0, proximo: "flop"},
+  flop: {cartas: 3, proximo: "turn"},
+  turn: {cartas: 1, proximo: "river"},
+  river: {cartas: 1, proximo: null},
+}
+
+const baralho = [];
+const naipes = ['♥', '♦', '♣', '♠'];
+const valores = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+for (const naipe of naipes) {
+    for (const valor of valores) {
+        baralho.push(`${valor}${naipe}`);
+    }
+}
+
+console.log(baralho);
+
 const indexToStyle = (
   width: number,
   height: number,
