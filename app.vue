@@ -1,6 +1,13 @@
 <template>
   <div class="sala">
     <Mesa>
+      <Campo>
+        <Baralho></Baralho>
+        <Carta>
+
+        </Carta>
+      </Campo>
+      
       <Assento
         v-for="(_, idx) in Array(jogadores)"
         :key="idx"
